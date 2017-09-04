@@ -1,4 +1,4 @@
-trenni-vim
+vim-trenni
 ==========
 
 Syntax highlighting for the [trenni](https://github.com/ioquatix/trenni) xml
