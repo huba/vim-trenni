@@ -20,8 +20,8 @@ if dein#load_state({path to plugin base path directory})
   call dein#begin({path to plugin base path directory})
 
   call dein#add({path to dein.vim directory})
-	" important bit
-	call dein#add('huba/vim-trenni')
+  " important bit
+  call dein#add('huba/vim-trenni')
   ...
 
   call dein#end()
@@ -32,9 +32,9 @@ filetype plugin indent on
 syntax enable
 ```
 
-Of course it can also be installed manually by cloning/downloading the repo and
+Of course it can also be install manually by cloning/downloading the repo and
 copying the files from `ftdetect/` and `syntax/` into the corresponding subdirectories
-in your vim runtime's path.
+in your (n)vim runtime's path.
 
 Possible Improvements
 ---------------------
