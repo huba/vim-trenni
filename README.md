@@ -4,8 +4,40 @@ trenni-vim
 Syntax highlighting for the [trenni](https://github.com/ioquatix/trenni) xml
 templating language.
 
-Roadmap
--------
+Installation
+------------
+
+I recommend installation with [dein.vim](https://github.com/Shougo/dein.vim).
+Simply make your `~/.vimrc` or your `~/.config/nvim/init.vim` look something like this:
+
+```vim
+if &compatible
+  set nocompatible
+endif
+set runtimepath+={path to dein.vim directory}
+
+if dein#load_state({path to plugin base path directory})
+  call dein#begin({path to plugin base path directory})
+
+  call dein#add({path to dein.vim directory})
+	" important bit
+	call dein#add('huba/vim-trenni')
+  ...
+
+  call dein#end()
+  call dein#save_state()
+endif
+
+filetype plugin indent on
+syntax enable
+```
+
+Of course it can also be installed manually by cloning/downloading the repo and
+copying the files from `ftdetect/` and `syntax/` into the corresponding subdirectories
+in your vim runtime's path.
+
+Possible Improvements
+---------------------
 
 * javascript syntax highlighting inside `<script>` tag.
 
