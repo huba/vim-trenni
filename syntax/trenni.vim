@@ -10,7 +10,9 @@ endif
 exe "runtime! syntax/xml.vim"
 unlet! b:current_syntax
 
+" ruby syntax highlighting
 syn include @ruby syntax/ruby.vim
+unlet! b:current_syntax
 
 syn cluster trenniRegions contains=trenniExpression,trenniBlock
 
@@ -23,6 +25,12 @@ syn keyword rubyClosing end else elsif finally rescue containedin=@ruby
 hi def link rubyClosing 			Statement
 
 hi def link trenniDelimiter		PreProc
+
+" Javascript syntax highlighting (not normally done in xml)
+syn include @javaScript syntax/javascript.vim
+unlet! b:current_syntax
+
+syn region javaScript	start="<script\_[^>]*>" end=+</script\_[^>]*>+ contains=@javascript,xmlTag,xmlEndTag,xmlCdataStart,xmlCdataEnd,xmlCdataCdata containedin=ALLBUT,@ruby,@javascript
 
 let b:current_syntax = 'trenni'
 
