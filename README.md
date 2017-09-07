@@ -36,11 +36,6 @@ Of course it can also be install manually by cloning/downloading the repo and
 copying the files from `ftdetect/` and `syntax/` into the corresponding subdirectories
 in your (n)vim runtime's path.
 
-Possible Improvements
----------------------
-
-* javascript syntax highlighting inside `<script>` tag.
-
 License
 -------
 
